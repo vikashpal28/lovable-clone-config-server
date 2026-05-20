@@ -1,0 +1,23 @@
+server:
+  port: 9020
+  servlet:
+    context-path: /workspace
+
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:9010/lovable-clone-workspace-service-db
+    username: user
+    password: password
+    driver-class-name: org.postgresql.Driver
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+
+minio:
+  url: http://localhost:9011
+  access-key: minioadmin
+  secret-key: minioadmin123
+  project-bucket: project
