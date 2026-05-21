@@ -9,3 +9,14 @@ spring:
     username: user
     password: password
     driver-class-name: org.postgresql.Driver  
+
+    ai:
+    openai:
+      api-key: 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
+      base-url: https://api.openai.com
+      chat:
+        options:
+          model: gpt-5.4-mini
+          temperature: 0.0
+          stream-usage: true
+  
