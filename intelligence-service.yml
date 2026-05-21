@@ -1,0 +1,11 @@
+server:
+  port: 9030
+  servlet.context-path: /intelligence
+
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:9010/lovable-clone-intelligence-service-db
+    username: user
+    password: password
+    driver-class-name: org.postgresql.Driver  
