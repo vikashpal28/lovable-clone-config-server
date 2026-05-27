@@ -59,3 +59,13 @@ management:
       org.apache.kafka.clients: WARN
       org.apache.kafka.common: WARN             
   
+---
+spring:
+  config:
+    activate:
+      on-profile: k8s
+  kafka:
+    bootstrap-servers: kafka.lovable-core.svc.cluster.local:29092
+  cloud:
+    discovery:
+      enabled: false
