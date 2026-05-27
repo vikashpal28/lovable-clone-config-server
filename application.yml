@@ -39,9 +39,9 @@ app:
   frontend:
     url: http://localhost:3000/frontend
   preview:
-   domain: localhost
-   namespace: lovable-apps
-   proxy-port: 8080 
+    domain: localhost
+    namespace: lovable-apps
+    proxy-port: 8080 
 
 management:
   endpoints:
@@ -75,3 +75,19 @@ eureka:
     enabled: false
     register-with-eureka: false
     fetch-registry: false
+
+jwt:
+  secretKey: ${JWT_SECRET}
+
+
+app:
+  frontend:
+    url: FRONTEND_URL
+  preview:
+    domain: ${PREVIEW_DOMAIN}
+    namespace: ${PREVIEW_NAMESPACE}
+    proxy-port: ${PROXY_PORT} 
+  
+ACCOUNT_SERVICE_URL: http://account-service
+WORKSPACE_SERVICE_URL: http://workspace-service
+INTELLIGENCE_SERVICE_URL: http://intelligence-service
