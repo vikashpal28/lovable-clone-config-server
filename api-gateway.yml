@@ -15,21 +15,21 @@ spring:
       routes:
          #1. Route for account-service
         - id: account-service
-          uri: lb://account-service
+          uri: ${ACCOUNT_SERVICE_URL:lb://account-service}
           predicates:
             - Path=/api/v1/account/**
           filters:
             - StripPrefix=2
         #2. Route for workspace-service
         - id: workspace-service
-          uri: lb://workspace-service
+          uri: ${WORKSPACE_SERVICE_URL:lb://workspace-service}
           predicates:
             - Path=/api/v1/workspace/**
           filters:
             - StripPrefix=2    
         #3. Route for intelligence-service
         - id: intelligence-service
-          uri: lb://intelligence-service
+          uri: ${INTELLIGENCE_SERVICE_URL:lb://intelligence-service}
           predicates:
             - Path=/api/v1/intelligence/**
           filters:
