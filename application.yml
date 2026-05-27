@@ -38,3 +38,24 @@ jwt:
 app:
   frontend:
     url: http://localhost:3000/frontend
+  preview:
+   domain: localhost
+   namespace: lovable-apps
+   proxy-port: 8080 
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+  health:
+    config:
+      enabled: true
+
+  logging:
+    level:
+      root: INFO
+      org.apache.kafka.clients: WARN
+      org.apache.kafka.common: WARN             
+  
