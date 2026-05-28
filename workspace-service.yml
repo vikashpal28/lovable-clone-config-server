@@ -30,7 +30,7 @@ spring:
   datasource:
     url: jdbc:postgresql://pgvector.lovable-core.svc.cluster.local:5432/workspace-db
     username: workspace_user
-    password: ${WORKSPACE_DB_PASSWORD}
+    password: ${DB_PASSWORD}
   data:
     redis:
       host: redis.lovable-core.svc.cluster.local
