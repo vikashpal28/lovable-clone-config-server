@@ -38,6 +38,6 @@ spring:
 
 minio:
   url: http://minio.lovable-core.svc.cluster.local:9011
-  access-key: ${MINIO_ROOT_KEY}
+  access-key: ${MINIO_ROOT_USER}
   secret-key: ${MINIO_ROOT_PASSWORD}
   project-bucket: projects
