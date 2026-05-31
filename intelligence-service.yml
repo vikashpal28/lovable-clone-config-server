@@ -27,7 +27,7 @@ spring:
     activate:
       on-profile: k8s
   datasource:
-    url: jdbc:postgresql://pgvector.lovable-core.svc.cluster.local:5432/intelligence-db
+    url: jdbc:postgresql://pgvector.lovable-core.svc.cluster.local:5432/intelligence_db
     username: intelligence_user
     password: ${DB_PASSWORD}
 
