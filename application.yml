@@ -37,7 +37,7 @@ jwt:
 
 app:
   frontend:
-    url: http://localhost:3000/frontend
+    url: http://localhost:5173/frontend
   preview:
     domain: localhost
     namespace: lovable-apps
