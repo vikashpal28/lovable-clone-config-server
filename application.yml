@@ -82,7 +82,7 @@ jwt:
 
 app:
   frontend:
-    url: http://api.codegenai.online
+    url: http://codegenai.online
   preview:
     domain: ${PREVIEW_DOMAIN}
     namespace: ${PREVIEW_NAMESPACE}
