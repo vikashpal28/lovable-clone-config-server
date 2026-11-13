@@ -1,25 +1,23 @@
 server:
   port: 9030
-  servlet.context-path: /intelligence
-
+  servlet:
+    context-path: /intelligence
 
 spring:
   datasource:
     url: jdbc:postgresql://localhost:9010/lovable-clone-intelligence-service-db
     username: user
     password: password
-    driver-class-name: org.postgresql.Driver  
-
-    ai:
+    driver-class-name: org.postgresql.Driver
+  ai:
     openai:
-      api-key: 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
+      api-key: ${AI_API_KEY:}
       base-url: https://api.openai.com
       chat:
         options:
           model: gpt-5.4-mini
           temperature: 0.0
           stream-usage: true
-
 
 ---
 spring:
@@ -30,10 +28,12 @@ spring:
     url: jdbc:postgresql://pgvector.lovable-core.svc.cluster.local:5432/intelligence_db
     username: intelligence_user
     password: ${DB_PASSWORD}
-
-ai:
+  ai:
     openai:
       api-key: ${AI_API_KEY}
-    chat:
+      base-url: https://api.openai.com
+      chat:
         options:
           model: gpt-5.4-mini
+          temperature: 0.0
+          stream-usage: true
